@@ -18,6 +18,3 @@ class TestCalculator():
 
     def test_cube(self):
         assert 27 == self.cal.cube(3)
-
-    def test_minus(self):
-        assert 3 == self.cal.minus(8, 5)
