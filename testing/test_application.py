@@ -65,5 +65,3 @@ class TestApi:
         r = requests.get("http://httpbin.testing-studio.com/get", headers=headers)
         print(r.headers)
         assert r.status_code == 200
-
-
