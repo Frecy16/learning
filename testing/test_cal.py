@@ -15,3 +15,6 @@ class TestCalculator():
 
     def test_sqrt(self):
         assert 3 == self.cal.sqrt(9)
+
+    def test_cube(self):
+        assert 27 == self.cal.cube(3)
