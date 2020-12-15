@@ -25,6 +25,9 @@ class Calculator:
         else:
             return a ** 0.5
 
+    def cube(self, a):
+        return a ** 3
+
     def mod(self, a, b):
         return a % b
 
