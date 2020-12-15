@@ -20,10 +20,7 @@ class Calculator:
 
     def sqrt(self, a):
         if a < 0:
-            print("ERROR")
+            print("负数不能开方")
             return -1
         else:
             return a ** 0.5
-
-    def cube(self, a):
-        return a ** 3

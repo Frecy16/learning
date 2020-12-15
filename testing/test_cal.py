@@ -16,5 +16,8 @@ class TestCalculator():
     def test_sqrt(self):
         assert 3 == self.cal.sqrt(9)
 
-    def test_cube(self):
-        assert 27 == self.cal.cube(3)
+    def test_mod(self):
+        assert 2 == self.cal.mod(10, 4)
+
+    def test_divisibility(self):
+        assert 2 == self.cal.divisibility(7, 3)
