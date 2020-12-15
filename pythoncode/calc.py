@@ -24,3 +24,9 @@ class Calculator:
             return -1
         else:
             return a ** 0.5
+
+    def mod(self, a, b):
+        return a % b
+
+    def divisibility(self, a, b):
+        return a // b
