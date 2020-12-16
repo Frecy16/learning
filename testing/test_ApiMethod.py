@@ -2,6 +2,7 @@
 from jsonpath import jsonpath
 import requests
 import pystache
+from hamcrest import *
 
 URL = 'http://httpbin.testing-studio.com'
 class TestApi:
@@ -89,6 +90,7 @@ class TestApi:
             {'person': 'cheny'}
         )
         print(r)
+        assert r == 'Hi cheny'
 
     def test_jsonpath(self):
         r = requests.get('https://ceshiren.com/latest.json')
@@ -96,3 +98,9 @@ class TestApi:
         assert r.status_code == 200
         # print(jsonpath(r.json(), '$..name'))
         assert jsonpath(r.json(), '$..name')[1] == '思寒'
+
+    def test_hamcrest(self):
+        r = requests.get('https://ceshiren.com/latest.json')
+        print(r.json())
+        assert_that(r.status_code, equal_to(200))
+        assert_that(r.json()['users'][1]['username'], equal_to('seveniruby'))
