@@ -3,6 +3,7 @@ from jsonpath import jsonpath
 import requests
 import pystache
 from hamcrest import *
+from requests.auth import HTTPBasicAuth
 
 URL = 'http://httpbin.testing-studio.com'
 class TestApi:
@@ -55,11 +56,29 @@ class TestApi:
         assert r.status_code == 200
 
     def test_cookie(self):
-        cookies = dict(cookie="adsdfskldfjsoidfj123")
+        # cookies = dict(cookie="adsdfskldfjsoidfj123")
+        cookies = {"cookie": "adsdfskldfjsoidfj123",
+                   "user": "cheny"}
         r = requests.get(URL + "/cookies", cookies=cookies)
         print(r.text)
+        print(r.request.headers)
         assert r.status_code == 200
         assert r.json()["cookies"]["cookie"] == "adsdfskldfjsoidfj123"
+
+    def test_Cookie(self):
+        header = {
+            "Cookie": "cheny520skldfksskj",
+            "User-Agent": "cheny"
+        }
+        r = requests.get(url=URL + "/cookies", headers=header)
+        print(r.request.headers)
+        assert r.status_code == 200
+
+    def test_auth(self):
+        # 需要先启动Charles代理进行授权
+        r = requests.get(URL + "/basic-auth/cheny/123456",
+                         auth=HTTPBasicAuth("cheny", "123456"))
+        print(r.text)
 
     def test_headers(self):
         headers = {
@@ -104,3 +123,7 @@ class TestApi:
         print(r.json())
         assert_that(r.status_code, equal_to(200))
         assert_that(r.json()['users'][1]['username'], equal_to('seveniruby'))
+
+
+if __name__ == '__main__':
+    test1 = TestApi()
