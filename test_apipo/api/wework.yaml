@@ -1,0 +1,30 @@
+create:
+  "method": "post"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/create?access_token=${token}"
+  "json":
+    "userid": ${userid}
+    "name": ${name}
+    "mobile": ${mobile}
+    "department":
+      - ${department}
+
+getmember:
+  "method": "get"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/get?access_token=${token}&userid=${userid}"
+
+getusers:
+  "method": "get"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/simplelist?access_token=${token}&department_id=${department_id}&fetch_child=${fetch_child}"
+
+update:
+  "method": "post"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/update?access_token=${token}"
+  "json":
+    "userid": ${userid}
+    "name": ${name}
+    "department":
+      - ${department}
+
+delete:
+  "method": "get"
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/delete?access_token=${token}&userid=${userid}"
