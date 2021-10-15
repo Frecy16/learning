@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:/Users/frecy/PycharmProjects/learning/py_study/fileOpera/8、标准输入&标准输出&错误输出.py", line 22, in <module>
+    print(1 / 0)
+ZeroDivisionError: division by zero
+Traceback (most recent call last):
+  File "C:/Users/frecy/PycharmProjects/learning/py_study/fileOpera/8、标准输入&标准输出&错误输出.py", line 22, in <module>
+    print(1 / 0)
+ZeroDivisionError: division by zero

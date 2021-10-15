@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env pip的使用.md
 # -*- coding: utf-8 -*-
 
 

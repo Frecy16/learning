@@ -6,9 +6,9 @@ class OperateMysql:
         self.conn = pymysql.connect(
             host='192.168.61.130',
             port=3306,
-            user='cytest',
+            user='cheny',
             passwd='123456',
-            db='test',
+            db='test1',
             charset='utf8',
         )
         self.cur = self.conn.cursor()

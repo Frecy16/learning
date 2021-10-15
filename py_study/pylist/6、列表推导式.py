@@ -15,6 +15,19 @@
 # print(points)
 
 # 请写一段python代码，实现分组一个list里面的元素，比如[1,2 ,3, 4, ...100], 变成[[1,2,3],[4,5,6]...]
-m = [i for i in range(1, 101)]
-n = [m[j:j + 3] for j in range(0, 100, 3)]  # range 第3个为步长
-print(n)
+# m = [i for i in range(1, 101)]
+# n = [m[j:j + 3] for j in range(0, 100, 3)]  # range 第3个为步长
+# print(n)
+
+# def reverse(i):
+#     if type(i) != int:
+#         return '请输入整数'
+#     elif i < 0:
+#         return -int(str(abs(i))[::-1])
+#     elif i == 0:
+#         return i
+#     else:
+#         return int(str(i)[::-1])
+#
+#
+# print(reverse(0))

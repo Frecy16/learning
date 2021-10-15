@@ -54,3 +54,6 @@
 # heros.extend(x)
 # print(heros)
 # print(x)
+
+s = '好好的ll'
+print(s.isalpha())

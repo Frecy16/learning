@@ -100,6 +100,8 @@ m = [6, 5, 3, 1, 8, 7, 2, 4]
 
 names = ['zhangsan', 'lisi', 'chris', 'jerry', 'henry']
 
+print(names.index('zhangsan'))
+
 # while True:
 #     username = str(input('请输入姓名：\n'))
 #     if username in names:

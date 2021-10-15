@@ -34,12 +34,12 @@ person = {'name': 'zhangsan', 'age': 18, 'gender': 'female'}
 
 # 第三种方式：获取到所有的value，一般不用
 # 只能拿到值，不能拿key
-# for v in person.valuse():
-#     print(v)
+for v in person.values():
+    print(v)
 
 # 第四种方式：
 # for item in person.items():  # 列表里的元素是元组，把元组当做整体进行遍历
 #    print(item[0], '=', item[1])
-
-for k, v in person.items():
-    print(k, '=', v)
+#
+# for k, v in person.items():
+#     print(k, '=', v)
