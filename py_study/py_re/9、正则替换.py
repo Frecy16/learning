@@ -1,4 +1,4 @@
-# 正则表达式作用是一共来对字符串进行检索和替换
+# 正则表达式作用是用来对字符串进行检索和替换
 # 检索：match  search  fullmatch  findall  finditer
 # 替换：sub
 import re
